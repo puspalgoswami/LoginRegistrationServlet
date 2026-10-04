@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <style>
+        * { box-sizing: border-box; font-family: Arial, sans-serif; }
+        body {
+            margin: 0; min-height: 100vh; display: flex;
+            justify-content: center; align-items: center;
+            background: linear-gradient(135deg, #75d3d5, #8ad8dc);
+        }
+        .container {
+            width: 92%; max-width: 1100px; padding: 55px 60px;
+            background: white; border-radius: 28px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.25);
+        }
+        h1 {
+            text-align: center; color: #4b0082;
+            font-size: 42px; margin: 0 0 35px;
+        }
+        .row { display: flex; align-items: center; margin: 14px 0; }
+        label {
+            width: 30%; font-size: 25px; font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 50%; height: 54px; border: 3px solid #d22b2b;
+            border-radius: 10px; font-size: 21px; padding: 8px 14px;
+        }
+        .button-row { justify-content: center; margin-top: 28px; }
+        input[type="submit"] {
+            background: #5b0aa8; color: white; border: none;
+            border-radius: 10px; padding: 15px 55px;
+            font-size: 24px; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🎓 Student Registration</h1>
+
+    <form action="RegisterServlet" method="post">
+        <div class="row"><label>Name:</label><input type="text" name="name" required></div>
+        <div class="row"><label>Enrollment No:</label><input type="text" name="enrollment" required></div>
+        <div class="row"><label>Batch:</label><input type="text" name="batch" required></div>
+        <div class="row"><label>Official Email:</label><input type="email" name="email" required></div>
+        <div class="row"><label>Mobile Number:</label><input type="text" name="mobile" required></div>
+        <div class="row"><label>DOB:</label><input type="date" name="dob" required></div>
+        <div class="row"><label>Address:</label><input type="text" name="address" required></div>
+        <div class="row"><label>State:</label><input type="text" name="state" required></div>
+        <div class="row"><label>City:</label><input type="text" name="city" required></div>
+        <div class="row"><label>User ID:</label><input type="text" name="username" required></div>
+        <div class="row"><label>Password:</label><input type="text" name="password" required></div>
+        <div class="row button-row"><input type="submit" value="Register"></div>
+    </form>
+</div>
+</body>
+</html>
